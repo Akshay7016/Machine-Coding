@@ -10,8 +10,9 @@ export const Accordion = () => {
     return (
         <div className='max-w-[600px] mx-auto mt-12'>
             {
-                accordionData.map(({ title, description }, index) => (
+                accordionData.map(({ title, description, id }, index) => (
                     <AccordionDetails
+                        key={id}
                         title={title}
                         description={description}
                         isOpen={index === activeIndex}

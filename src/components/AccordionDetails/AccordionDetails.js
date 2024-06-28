@@ -1,3 +1,5 @@
+import { bool, func, string } from "prop-types";
+
 export const AccordionDetails = ({ title, description, isOpen, handleAccordion }) => (
     <div>
         <div onClick={handleAccordion} className="flex justify-between items-center py-4 px-8 border">
@@ -9,4 +11,11 @@ export const AccordionDetails = ({ title, description, isOpen, handleAccordion }
         }
     </div>
 );
+
+AccordionDetails.propTypes = {
+    title: string,
+    description: string,
+    isOpen: bool,
+    handleAccordion: func
+};
 
